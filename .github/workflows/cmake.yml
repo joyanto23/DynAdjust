@@ -38,6 +38,10 @@ jobs:
       # Build and test using shell script
       shell: bash
       run: |
-        ./resources/make_dynadjust_gcc.sh --no-install --auto --do-not-clone --test
+        cp ./resources/make_dynadjust_gcc.sh ../
+        pwd
+        cd ..
+        pwd
+        ./make_dynadjust_gcc.sh --no-install --auto --do-not-clone --test
 
     
