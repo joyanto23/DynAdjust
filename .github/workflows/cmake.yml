@@ -42,6 +42,7 @@ jobs:
         cd ../
         ls -l
         env
+        export PATH=$PATH:/opt/local/bin:/opt/local/sbin:/usr/bin/c++:/usr/bin/make
         ./DynAdjust/resources/make_dynadjust_gcc.sh --no-install --auto --do-not-clone --test
 
     
