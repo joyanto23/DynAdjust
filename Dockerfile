@@ -11,6 +11,7 @@ RUN apt-get update &&\
  apt-get install -y wget &&\
  apt-get install -y python3 &&\
  apt-get install -y python3-pip &&\
+ pip install --user cpp-coveralls codecov &&\
  apt-get install -y --no-install-recommends gnupg2 &&\
  apt-get install -y --no-install-recommends p7zip &&\
  apt-get install -y --no-install-recommends libboost-system-dev libboost-filesystem-dev libboost-timer-dev libboost-thread-dev libboost-program-options-dev &&\
