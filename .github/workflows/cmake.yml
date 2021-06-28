@@ -39,6 +39,6 @@ jobs:
       shell: bash
       run: |
         cd ../
-        ./resources/make_dynadjust_gcc.sh --no-install --auto --do-not-clone --test
+        ./DynAdjust/resources/make_dynadjust_gcc.sh --no-install --auto --do-not-clone --test
 
     
