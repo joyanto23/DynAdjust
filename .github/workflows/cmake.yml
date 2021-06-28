@@ -40,6 +40,8 @@ jobs:
       shell: bash
       run: |
         cd ../
+        ls -l
+        env
         ./DynAdjust/resources/make_dynadjust_gcc.sh --no-install --auto --do-not-clone --test
 
     
