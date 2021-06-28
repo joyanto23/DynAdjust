@@ -26,11 +26,6 @@ RUN apt-get update &&\
  chmod +x ./DynAdjust/resources/make_dynadjust_gcc.sh &&\
  ./DynAdjust/resources/make_dynadjust_gcc.sh --no-install --auto --do-not-clone --test
 WORKDIR /app/DynAdjust/dynadjust/
-RUN coveralls \
-   --gcov /usr/bin/gcov
-     --exclude-pattern ".*feature_tests.*" 
-     --exclude-pattern ".*CompilerId.*" 
-     --exclude-pattern ".*/resources/.*"
-     --gcov-options '\-lp' >/dev/null 2>&1
+RUN coveralls --gcov /usr/bin/gcov --exclude-pattern ".*feature_tests.*" --exclude-pattern ".*CompilerId.*" --exclude-pattern ".*/resources/.*" --gcov-options '\-lp' >/dev/null 2>&1
 RUN bash <(curl -s https://codecov.io/bash) >/dev/null 2>&1
   
